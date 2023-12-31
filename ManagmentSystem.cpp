@@ -22,7 +22,7 @@ void ManagmentSystem::ProgrameHeader()
               << endl;
 }
 
-void ManagmentSystem::OpenStream(int Permissions)
+void ManagmentSystem::OpenStream(ios_base::openmode Permissions)
 {
     this->databaseFile.close();
     this->databaseFile.open(this->databasePath, Permissions);

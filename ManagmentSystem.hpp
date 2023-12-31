@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include <exception>
 #include <vector>
+#include <algorithm>
 #include "Bill.Info.hpp"
 
 using namespace std;
@@ -19,7 +21,7 @@ class ManagmentSystem {
     public:
         ManagmentSystem(string dbaPath);
         void        ProgrameHeader();
-        void        OpenStream(int Permissions);
+        void        OpenStream(ios_base::openmode Permissions);
         void        StoreData(string ItemName, string ItemManufacturingDate, string ItemPrice, string ItemTaxPercent, string ItemQuantity, string ItemNumber, string ItemCategory, string ItemDiscount);
         void        ReadData(string &readline, string fieldName, int type);
 
